@@ -25,10 +25,10 @@ const Product = () => {
   }
   useEffect(() => {
     fetchProductData();
-  },[productId,])
+  },[productId])
 
   return productData ? (
-    <div className='border-t-2 pt-10 transition-opacity ease-in duration-500 opacity-100'>
+    <div className='border-t pt-10 transition-opacity ease-in duration-500 opacity-100'>
       {/* product data */}
       <div className='flex gap-12 sm:gap-12 flex-col sm:flex-row'>
               
@@ -84,11 +84,10 @@ const Product = () => {
             {/* description and reviews */}
             <div className='mt-20'>
               <div className='flex'>
-                <b className='border px-5 py-3 text-sm'>Description</b>
-                <p className='border px-5 py-3 text-sm'>Reviews (122)</p>
-
+                <b className='border px-5 py-3 text-sm flex-1'>Description</b>
+                <p className='border px-5 py-3 text-sm flex-1'>Reviews (122)</p>
               </div>
-              <div className='flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500'>
+              <div className='flex flex-col gap-4 border border-t-none px-6 py-6 text-sm text-gray-500'>
                 <p>This stylish cotton top is designed for everyday comfort and elegance. Made from premium-quality fabric, it offers a soft touch and breathable feel, perfect for casual outings or daily wear.</p>
                 <p>An eCommerce website is an online platform that allows customers to browse, select, and purchase products or services conveniently from their home or mobile device.</p>
               </div>
