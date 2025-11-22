@@ -1,17 +1,21 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { ShopContext } from '../context/ShopContext';
 
 const Login = () => {
 
   const [currentState, setCurrentState] = useState('Sign Up');
-  const navigate = useNavigate(); // 👈 for redirect
+  // const navigate = useNavigate(); // 👈 for redirect
+  const {token ,setToken , navigate, backendUrl} = useContext(ShopContext)
 
   const onSubmitHandler = async (event) => {
     event.preventDefault();
-
-    // Yahan future me tu API call laga sakta hai (login/signup)
-    // Filhal bas navigate kara dete hain
-    navigate('/home'); // 👈 redirect to home page after submit
+    
+    try {
+      
+    } catch (error) {
+      
+    }
   }
 
   return (
